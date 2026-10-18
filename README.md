@@ -12,7 +12,7 @@ BSc in Computer Science, Constructor University (2026)<br>
 ex-KAEFER SWE · ex-Fraunhofer Researcher
 </p>
 
-<h3 align="center">Things I've built:</h3>
+<h3 align="center">Things I've worked on:</h3>
 
 <p align="center">
 <a href="https://github.com/Bilal-Waraich/mechinterp-medical-vision">mechinterp-medical-vision</a>: thesis code, sparse autoencoders on a medical imaging model (<a href="https://github.com/Bilal-Waraich/mechinterp-medical-vision/blob/batch-topk/thesis/Probing_Feature_Universality_in_Medical_Vision_Models_Thesis_BilalWaraich.pdf">PDF</a>)<br>
