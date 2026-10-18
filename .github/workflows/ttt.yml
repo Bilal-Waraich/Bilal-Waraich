@@ -1,10 +1,5 @@
 name: tic-tac-toe
 
-# A visitor opens an issue titled "ttt|B2" (the README links do this for them).
-# This workflow plays their move, plays the bot's reply, rewrites the board in README.md,
-# comments on the issue and closes it. The issue title is only ever matched against a strict
-# pattern and read as data; it is never interpolated into a shell command.
-
 on:
   issues:
     types: [opened]
@@ -13,7 +8,6 @@ permissions:
   contents: write
   issues: write
 
-# One move at a time, so two simultaneous moves cannot overwrite each other.
 concurrency:
   group: tic-tac-toe
   cancel-in-progress: false

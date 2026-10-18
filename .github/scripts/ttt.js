@@ -1,9 +1,6 @@
-// Tic-tac-toe for the profile README. Pure functions, no I/O, so they can be tested offline.
-// The visitor is X and moves first; the bot is O.
-
-const SQUARES = ['A1', 'B1', 'C1', 'A2', 'B2', 'C2', 'A3', 'B3', 'C3']; // index = row * 3 + column
+const SQUARES = ['A1', 'B1', 'C1', 'A2', 'B2', 'C2', 'A3', 'B3', 'C3'];
 const LINES = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
-const MISTAKE_RATE = 0.2; // how often the bot plays a random legal move, so visitors can win
+const MISTAKE_RATE = 0.2;
 
 const NEW_STATE = () => ({ board: '.........', visitors: 0, bot: 0, draws: 0, last: 'No games finished yet.' });
 
@@ -41,7 +38,6 @@ function botMove(board, rng) {
   return corners.length ? pick(corners, rng) : pick(free, rng);
 }
 
-// Returns { state, changed, message }. `square` is whatever the issue title said after "ttt|".
 function play(state, square, rng = Math.random) {
   const name = String(square).trim().toUpperCase();
   const idx = SQUARES.indexOf(name);
