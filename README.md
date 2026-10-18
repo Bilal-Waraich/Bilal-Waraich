@@ -16,8 +16,6 @@ ex-KAEFER SWE · ex-Fraunhofer Researcher
 
 <p align="center">
 <a href="https://github.com/Bilal-Waraich/mechinterp-medical-vision">mechinterp-medical-vision</a>: thesis code, sparse autoencoders on a medical imaging model (<a href="https://github.com/Bilal-Waraich/mechinterp-medical-vision/blob/batch-topk/thesis/Probing_Feature_Universality_in_Medical_Vision_Models_Thesis_BilalWaraich.pdf">PDF</a>)<br>
-
-
 <a href="https://github.com/Bilal-Waraich/FerretOS">FerretOS</a>: a Rust microkernel for tiny RISC-V chips<br>
 <a href="https://github.com/Bilal-Waraich/OML">OML</a>: write a data structure once, generate it in several languages<br>
 <a href="https://github.com/Bilal-Waraich/Repoduce-Me">Repoduce-Me</a>: paper in, runnable demo out (1st place, Constructor Knowledge Labs Hackathon 2025)<br>
