@@ -21,12 +21,12 @@ Tic-tac-toe. You are X, I am O. Visitors 0, bot 0, draws 0.
 
 ```text
     A B C
- 1  . . .
- 2  . . .
+ 1  O . .
+ 2  . X .
  3  . . .
 ```
 
-Your move (each link opens a prefilled issue, press "Submit new issue"): [A1](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CA1) · [B1](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CB1) · [C1](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC1) · [A2](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CA2) · [B2](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CB2) · [C2](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC2) · [A3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CA3) · [B3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CB3) · [C3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC3)
+Your move (each link opens a prefilled issue, press "Submit new issue"): [B1](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CB1) · [C1](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC1) · [A2](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CA2) · [C2](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC2) · [A3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CA3) · [B3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CB3) · [C3](https://github.com/Bilal-Waraich/Bilal-Waraich/issues/new?title=ttt%7CC3)
 
 Last game: No games finished yet.
 <!-- /ttt -->
