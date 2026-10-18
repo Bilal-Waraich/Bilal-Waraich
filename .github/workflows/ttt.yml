@@ -1,0 +1,72 @@
+name: tic-tac-toe
+
+# A visitor opens an issue titled "ttt|B2" (the README links do this for them).
+# This workflow plays their move, plays the bot's reply, rewrites the board in README.md,
+# comments on the issue and closes it. The issue title is only ever matched against a strict
+# pattern and read as data; it is never interpolated into a shell command.
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One move at a time, so two simultaneous moves cannot overwrite each other.
+concurrency:
+  group: tic-tac-toe
+  cancel-in-progress: false
+
+jobs:
+  move:
+    if: startsWith(github.event.issue.title, 'ttt|')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Play the move
+        id: play
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const ttt = require('./.github/scripts/ttt.js');
+            const title = context.payload.issue.title;
+            const m = /^ttt\|([A-Ca-c][1-3])$/.exec(title);
+            if (!m) {
+              core.setOutput('changed', 'false');
+              core.setOutput('message', 'That is not a move. Use the links in the README.');
+              return;
+            }
+            const state = JSON.parse(fs.readFileSync('ttt.json', 'utf8'));
+            const res = ttt.play(state, m[1]);
+            core.setOutput('message', res.message);
+            core.setOutput('changed', String(res.changed));
+            if (!res.changed) return;
+            const repo = `${context.repo.owner}/${context.repo.repo}`;
+            fs.writeFileSync('ttt.json', JSON.stringify(res.state, null, 2) + '\n');
+            fs.writeFileSync('README.md', ttt.applyToReadme(fs.readFileSync('README.md', 'utf8'), res.state, repo));
+            core.setOutput('square', m[1].toUpperCase());
+
+      - name: Commit the new board
+        if: steps.play.outputs.changed == 'true'
+        env:
+          SQUARE: ${{ steps.play.outputs.square }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md ttt.json
+          git commit -m "tic-tac-toe: ${SQUARE}"
+          git push
+
+      - name: Reply and close the issue
+        uses: actions/github-script@v7
+        env:
+          MESSAGE: ${{ steps.play.outputs.message }}
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            await github.rest.issues.createComment({ owner, repo, issue_number, body: process.env.MESSAGE });
+            await github.rest.issues.update({ owner, repo, issue_number, state: 'closed', state_reason: 'completed' });
