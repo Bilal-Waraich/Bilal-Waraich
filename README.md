@@ -1,16 +1,24 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow.svg" alt="Bilal Waraich. CS student who somehow made it past hello world." width="860">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow-header-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow-header-light.svg">
+    <img src="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow-header-light.svg" alt="Bilal Waraich. CS student who somehow made it past hello world." width="860">
+  </picture>
 </p>
 
 - Studying at the University of Zürich
 - BSc in Computer Science, Constructor University (2026)
 - Thesis: mechanistic interpretability of a medical imaging model
 
+<p align="center"><img src="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow-1.svg" alt="" width="860"></p>
+
 ### Tech stack
 
 - Mostly using: C++ · Rust · Python
 - Also worked with: C · Kotlin · JavaScript · PHP · Lean 4
 - Machine learning: PyTorch
+
+<p align="center"><img src="https://raw.githubusercontent.com/Bilal-Waraich/Bilal-Waraich/main/assets/snow-2.svg" alt="" width="860"></p>
 
 ### Things I've made
 
